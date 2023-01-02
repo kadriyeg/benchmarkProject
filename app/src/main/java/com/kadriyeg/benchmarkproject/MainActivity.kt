@@ -1,41 +1,43 @@
 package com.kadriyeg.benchmarkproject
 
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.os.SystemClock
+import android.widget.Button
 import android.widget.TextView
-import android.os.AsyncTask
-import kotlin.system.measureNanoTime
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var textView: TextView
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        textView = findViewById(R.id.cpuTest)
+        textView = findViewById(R.id.welcomeText)
+        textView = findViewById(R.id.creatorText)
 
-        // Start the stress test in a background thread
-        StressTestTask().execute()
-    }
 
-    inner class StressTestTask : AsyncTask<Void, Void, Long>() {
-        override fun doInBackground(vararg params: Void?): Long {
-            // Perform the stress test
-            return measureNanoTime {
-                var i = 0
-                while (i < 10000) {
-                    i++
-                }
-            }
+        val cpuButton = findViewById<Button>(R.id.cpuBtn)
+        cpuButton.setOnClickListener {
+            val intent = Intent(this, CpuTestActivity::class.java)
+            startActivity(intent)
         }
 
-        override fun onPostExecute(result: Long?) {
-            // Update the UI with the result of the stress test
-            textView.text = result.toString()
+        val gpuButton = findViewById<Button>(R.id.gpuBtn)
+        gpuButton.setOnClickListener {
+            val intent = Intent(this, GpuTestActivity::class.java)
+            startActivity(intent)
         }
+
+        val stringButton = findViewById<Button>(R.id.stringBtn)
+        stringButton.setOnClickListener {
+            val intent = Intent(this, StringBTestActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }
