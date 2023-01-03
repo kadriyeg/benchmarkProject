@@ -8,12 +8,18 @@
 
     <TextView
         android:id="@+id/welcomeText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="220dp"
-        android:layout_marginBottom="63dp"
-        android:text="WELCOME TO THE BENCHMARK APP"
-        app:layout_constraintBottom_toTopOf="@+id/cpuBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="151dp"
+        android:layout_marginEnd="62dp"
+        android:layout_marginBottom="54dp"
+        android:text="WELCOME TO THE BENCHMARK APP CENG 3201 TERM PROJECT"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/stringBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,32 +28,34 @@
         android:id="@+id/stringBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginBottom="72dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="34dp"
         android:text="STRING TEST"
+        app:layout_constraintBottom_toTopOf="@+id/gpuBtn"
         app:layout_constraintStart_toStartOf="@+id/gpuBtn"
-        app:layout_constraintTop_toBottomOf="@+id/gpuBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/welcomeText" />
 
     <Button
         android:id="@+id/cpuBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="19dp"
-        android:text="CPU Stress Test"
-        app:layout_constraintBottom_toTopOf="@+id/gpuBtn"
-        app:layout_constraintEnd_toEndOf="@+id/gpuBtn"
-        app:layout_constraintTop_toBottomOf="@+id/welcomeText" />
+        android:layout_marginBottom="36dp"
+        android:text="Performance Test"
+        app:layout_constraintBottom_toTopOf="@+id/creatorText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gpuBtn" />
 
     <Button
         android:id="@+id/gpuBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="17dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="32dp"
         android:text="GPU Stress Test"
-        app:layout_constraintBottom_toTopOf="@+id/stringBtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cpuBtn" />
+        app:layout_constraintBottom_toTopOf="@+id/cpuBtn"
+        app:layout_constraintEnd_toEndOf="@+id/cpuBtn"
+        app:layout_constraintTop_toBottomOf="@+id/stringBtn" />
 
     <TextView
         android:id="@+id/creatorText"
@@ -55,12 +63,14 @@
         android:layout_height="0dp"
         android:layout_marginStart="72dp"
         android:layout_marginEnd="72dp"
-        android:layout_marginBottom="44dp"
+        android:layout_marginBottom="36dp"
         android:text="Edibe Feride Yamaç - 192010020018 İrem Nur Mermer - 192010020007 Kadriye Gündüz - 192010020025"
+        android:textAlignment="center"
         android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/stringBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/cpuBtn" />
 
 </android.support.constraint.ConstraintLayout>
