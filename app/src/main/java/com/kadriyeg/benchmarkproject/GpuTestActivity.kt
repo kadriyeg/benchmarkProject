@@ -2,7 +2,6 @@ package com.kadriyeg.benchmarkproject
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.os.AsyncTask
@@ -31,7 +30,7 @@ class GpuTestActivity : AppCompatActivity() {
                 val canvas = Canvas(bitmap)
 
                 var i = 0
-                while (i < 100) {
+                while (i < 1000000) {
                     // Draw a complex graphic on the canvas
                     drawGraphic(canvas)
                     i++

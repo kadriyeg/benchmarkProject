@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         val cpuButton = findViewById<Button>(R.id.cpuBtn)
         cpuButton.setOnClickListener {
-            val intent = Intent(this, CpuTestActivity::class.java)
+            val intent = Intent(this, PerformanceTestActivity::class.java)
             startActivity(intent)
         }
 
