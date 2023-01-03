@@ -36,8 +36,8 @@ class StringBTestActivity : AppCompatActivity() {
 
         // Update the text of the TextViews
         stringConcatResultTextView.text = stringConcatResult
-        stringInterpResultTextView.text = "String interpolation result:  $stringInterpResult"
-        totalTimeTextView.text = "Total time that this test took for this specific test:  $totalTime ms"
+        stringInterpResultTextView.text = "heloooooo $stringInterpResult"
+        totalTimeTextView.text = " total timeeee $totalTime ms"
     }
 
 

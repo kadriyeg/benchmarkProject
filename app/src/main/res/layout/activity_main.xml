@@ -8,17 +8,12 @@
 
     <TextView
         android:id="@+id/welcomeText"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="65dp"
-        android:layout_marginTop="149dp"
-        android:layout_marginEnd="65dp"
-        android:layout_marginBottom="53dp"
-        android:text="WELCOME TO THE BENCHMARK APP CENG 3201 TERM PROJECT"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/stringBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="220dp"
+        android:layout_marginBottom="63dp"
+        android:text="WELCOME TO THE BENCHMARK APP"
+        app:layout_constraintBottom_toTopOf="@+id/cpuBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -27,50 +22,45 @@
         android:id="@+id/stringBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="72dp"
         android:text="STRING TEST"
-        app:layout_constraintBottom_toTopOf="@+id/gpuBtn"
         app:layout_constraintStart_toStartOf="@+id/gpuBtn"
-        app:layout_constraintTop_toBottomOf="@+id/welcomeText" />
+        app:layout_constraintTop_toBottomOf="@+id/gpuBtn" />
 
     <Button
         android:id="@+id/cpuBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="39dp"
-        android:text="Performance Test"
-        app:layout_constraintBottom_toTopOf="@+id/creatorText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gpuBtn" />
+        android:layout_marginBottom="19dp"
+        android:text="CPU Stress Test"
+        app:layout_constraintBottom_toTopOf="@+id/gpuBtn"
+        app:layout_constraintEnd_toEndOf="@+id/gpuBtn"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeText" />
 
     <Button
         android:id="@+id/gpuBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="7dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="17dp"
         android:text="GPU Stress Test"
-        app:layout_constraintBottom_toTopOf="@+id/cpuBtn"
-        app:layout_constraintEnd_toEndOf="@+id/cpuBtn"
-        app:layout_constraintTop_toBottomOf="@+id/stringBtn" />
+        app:layout_constraintBottom_toTopOf="@+id/stringBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cpuBtn" />
 
     <TextView
         android:id="@+id/creatorText"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="65dp"
-        android:layout_marginEnd="65dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="44dp"
         android:text="Edibe Feride Yamaç - 192010020018 İrem Nur Mermer - 192010020007 Kadriye Gündüz - 192010020025"
-        android:textAlignment="center"
         android:textSize="16sp"
-        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cpuBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/stringBtn" />
 
 </android.support.constraint.ConstraintLayout>
